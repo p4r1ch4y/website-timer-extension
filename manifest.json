@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Website Timer",
+    "version": "1.0",
+    "description": "Tracks the time spent on each website",
+    "permissions": ["storage", "activeTab", "tabs"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+      }
+    }
+  }
+  
